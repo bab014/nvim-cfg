@@ -1,1 +1,2 @@
-Bret's Neovim Config
+# Bret's Neovim Config
+

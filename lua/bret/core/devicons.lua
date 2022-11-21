@@ -50,5 +50,16 @@ devicons.setup {
       color = "#ffe300",
       name = "Sql",
     },
+    -- Git
+    [".gitignore"] = {
+      icon = "",
+      color = "#F1502F",
+      name = "GitIgnore",
+    },
+    [".git"] = {
+      icon = "",
+      color = "#F1502F",
+      name = "GitConfig",
+    },
   }
 }

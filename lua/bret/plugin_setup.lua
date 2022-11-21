@@ -46,6 +46,8 @@ return packer.startup(function(use)
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
   use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
   use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
+  -- MarkdownPreview
+  use { "iamcco/markdown-preview.nvim", commit = "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, }
   -- Colorizer
   use { "uga-rosa/ccc.nvim", commit = "da5ed534bf401819eb4bc6a78c11c11b8bf3fb65" }
 

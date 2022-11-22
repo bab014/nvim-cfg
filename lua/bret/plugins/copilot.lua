@@ -6,6 +6,7 @@ local ftypes = {}
 ftypes["go"] = true
 ftypes["python"] = true
 ftypes["dap-repl"] = false
+ftypes["TelescopePrompt"] = false
 
 vim.g.copilot_filetypes = ftypes
 vim.cmd[[imap <silent><script><expr> <C-a> copilot#Accept("\<CR>")]]

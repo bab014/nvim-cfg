@@ -56,6 +56,9 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use { "shaunsingh/nord.nvim", commit = "a6bb6a8b71fdd5329d0ae0fd637e700b12e4a5cb" } -- Nord colorscheme
+  use { "ellisonleao/gruvbox.nvim", commit = "5ac400bbd7bbe5d5911a79c45347df6d3afd388e" } -- Gruvbox colorscheme
+  use { "navarasu/onedark.nvim", commit = "df090f9d72d43aa51dec5760c44da288b58a79b6" }
+  use { "folke/tokyonight.nvim", commit = "62b4e89ea1766baa3b5343ca77d62c817f5f48d0" }
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac", }
@@ -80,6 +83,7 @@ return packer.startup(function(use)
   use { "nvim-telescope/telescope.nvim", commit = "7a4ffef931769c3fe7544214ed7ffde5852653f6" }
 
   -- Golang
+  use { "ray-x/guihua.lua" }
   use { "ray-x/go.nvim", commit = "5352d821f12f68840993e877084e5016564377f3" }
 
   -- CMP
@@ -112,6 +116,11 @@ return packer.startup(function(use)
 
   -- Notify
   use { "rcarriga/nvim-notify", commit = "43c54aec682854b39a7e0e89b4c3ba00426d74a8" }
+  
+  -- debug
+  use { "mfussenegger/nvim-dap" }
+  use { "rcarriga/nvim-dap-ui" }
+  use { "leoluz/nvim-dap-go" }
   
   if PACKER_BOOTSTRAP then
     require("packer").sync()

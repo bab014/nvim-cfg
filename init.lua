@@ -22,5 +22,7 @@ require("bret.plugins.bufferline")
 require("bret.plugins.copilot")
 require("bret.plugins.toggleterm")
 require("bret.plugins.gitsigns")
+require("bret.plugins.dap")
+require("bret.plugins.dapui")
 -- LSP
 require("bret.lsp")

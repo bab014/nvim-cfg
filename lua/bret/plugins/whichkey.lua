@@ -159,6 +159,12 @@ local mappings = {
       "Workspace Symbols",
     },
   },
+  r = {
+    name = "Harpoon",
+    a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add File" },
+    n = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Next File" },
+    p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Prev File" },
+  },
   s = {
     name = "Search",
     b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },

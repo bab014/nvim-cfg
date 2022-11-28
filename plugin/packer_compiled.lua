@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/bab14/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["SchemaStore.nvim"] = {
+    loaded = true,
+    path = "/home/bab14/.local/share/nvim/site/pack/packer/start/SchemaStore.nvim",
+    url = "https://github.com/b0o/SchemaStore.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/bab14/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -149,10 +154,20 @@ _G.packer_plugins = {
     path = "/home/bab14/.local/share/nvim/site/pack/packer/start/guihua.lua",
     url = "https://github.com/ray-x/guihua.lua"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/bab14/.local/share/nvim/site/pack/packer/start/harpoon",
+    url = "https://github.com/ThePrimeagen/harpoon"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/bab14/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["lualine-copilot"] = {
+    loaded = true,
+    path = "/home/bab14/.local/share/nvim/site/pack/packer/start/lualine-copilot",
+    url = "https://github.com/1478zhcy/lualine-copilot"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -175,6 +190,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/bab14/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["navigator.lua"] = {
+    loaded = true,
+    path = "/home/bab14/.local/share/nvim/site/pack/packer/start/navigator.lua",
+    url = "https://github.com/ray-x/navigator.lua"
+  },
+  ["nlsp-settings.nvim"] = {
+    loaded = true,
+    path = "/home/bab14/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
+    url = "https://github.com/tamago324/nlsp-settings.nvim"
   },
   ["nord.nvim"] = {
     loaded = true,

@@ -7,6 +7,10 @@ local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
 end
 
+local hl_str = function(str, hl)
+  return "%#" .. hl .. "#" .. str .. "%*"
+end
+
 local diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic" },
@@ -48,6 +52,44 @@ local location = {
   padding = 0,
 }
 
+local go_version = {
+  function ()
+    if vim.bo.filetype == "go" then
+      return vim.fn.system("go version | awk '{print $3}' | tr '\t' ' '")
+    else
+      return ""
+    end
+  end,
+  padding = 0,
+}
+
+local language_server = {
+  function()
+    local ignore_clients = { "null-ls", "copilot" }
+    local clients = vim.lsp.buf_get_clients()
+    local client_names = {}
+
+    for _, client in ipairs(clients) do
+      if client.name ~= "copilot" then
+        table.insert(client_names, client.name)
+      end
+    end
+
+    local client_names_str = table.concat(client_names, ", ")
+    local client_names_str_len = string.len(client_names_str)
+
+    if client_names_str_len == 0 then
+      return "nothing"
+    else
+      local formatted_return = " " .. client_names_str
+      return formatted_return
+    end
+
+  end,
+  padding = 1,
+}
+
+
 local progress = function()
 	local current_line = vim.fn.line(".")
 	local total_lines = vim.fn.line("$")
@@ -65,19 +107,19 @@ lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = "auto",
-		component_separators = { left = "", right = "" },
+		component_separators = { left = "", right = "|" },
 		section_separators = { left = "", right = "" },
-		disabled_filetypes = { "alpha", "dashboard", "Outline" },
+		disabled_filetypes = { "alpha", "dashboard", "Outline", "Lexplore" },
 		always_divide_middle = true,
 	},
 	sections = {
-		lualine_a = { branch, diagnostics },
-		lualine_b = { mode },
-		lualine_c = {},
+		lualine_a = { mode },
+		lualine_b = { branch, diagnostics },
+		lualine_c = { diff },
 		-- lualine_x = { "encoding", "fileformat", "filetype" },
-		lualine_x = { diff, spaces, "encoding", filetype },
+		lualine_x = { { "filetype", icon_only = true }, language_server, { "copilot", color = { fg = "#8bcd5b"} } },
 		lualine_y = { location },
-		lualine_z = { progress },
+		lualine_z = {},
 	},
 	inactive_sections = {
 		lualine_a = {},

@@ -46,6 +46,8 @@ return packer.startup(function(use)
   use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
   use { "akinsho/bufferline.nvim", commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4" }
   use { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" }
+  -- Harpoon
+  use { "ThePrimeagen/harpoon", commit = "00f486e9634406bbfc5bc25528685beb530fb3cf" }
   -- MarkdownPreview
   use { "iamcco/markdown-preview.nvim", commit = "02cc3874738bc0f86e4b91f09b8a0ac88aef8e96", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, }
   -- Colorizer
@@ -84,7 +86,8 @@ return packer.startup(function(use)
 
   -- Golang
   use { "ray-x/guihua.lua" }
-  use { "ray-x/go.nvim", commit = "5352d821f12f68840993e877084e5016564377f3" }
+  use { "ray-x/go.nvim" }
+  use { "ray-x/navigator.lua" }
 
   -- CMP
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
@@ -103,10 +106,13 @@ return packer.startup(function(use)
   use { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12"} -- simple to use language server installer
   use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" }
 	use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters
+  use { "tamago324/nlsp-settings.nvim", commit = "8b6366f6d09c61ca56a755b6308804976f0ffd8e" }
   use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" }
+  use { "b0o/schemastore.nvim" }
   
   -- Copilot
   use { "github/copilot.vim", commit = "5a411d19ce7334ab10ba12516743fc25dad363fa" }
+  use { "1478zhcy/lualine-copilot" }
 
   -- Toggleterm
   use { "akinsho/toggleterm.nvim", commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda" }

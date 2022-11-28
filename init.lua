@@ -5,6 +5,8 @@ require("bret.core.colorscheme")
 require("bret.core.autocommands")
 require("bret.core.devicons")
 require("bret.core.notify")
+-- LSP
+require("bret.lsp")
 -- Plugins
 require("bret.plugin_setup")
 require("bret.plugins.treesitter")
@@ -24,5 +26,3 @@ require("bret.plugins.toggleterm")
 require("bret.plugins.gitsigns")
 require("bret.plugins.dap")
 require("bret.plugins.dapui")
--- LSP
-require("bret.lsp")

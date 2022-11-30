@@ -29,7 +29,7 @@ devicons.setup {
     -- ReadMe
     ["README.md"] = {
       icon = "",
-      color = "#3468ff",
+      color = "#1994ea",
       name = "ReadMe",
     },
     -- Markdown
@@ -60,6 +60,38 @@ devicons.setup {
       icon = "",
       color = "#F1502F",
       name = "GitConfig",
+    },
+    -- Javasctipt
+    js = {
+      icon = "",
+      color = "#f1e05a",
+      name = "Javascript",
+    },
+    ts = {
+      icon = "ﯤ",
+      color = "#2b7489",
+      name = "Typescript",
+    },
+    ["package.json"] = {
+      icon = "",
+      color = "#aaff00",
+      name = "PackageJson",
+    },
+    ["package-lock.json"] = {
+      icon = "",
+      color = "#aaff00",
+      name = "PackageLockJson",
+    },
+    -- Docker
+    ["Dockerfile"] = {
+      icon = "",
+      color = "#0db7ed",
+      name = "Dockerfile",
+    },
+    ["docker-compose.yml"] = {
+      icon = "",
+      color = "#ffb7ed",
+      name = "DockerCompose",
     },
   }
 }

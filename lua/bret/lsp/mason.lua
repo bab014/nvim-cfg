@@ -3,6 +3,7 @@ local servers = {
   "gopls",
   -- "yamlls",
   "emmet_ls",
+  "tailwindcss",
 }
 
 local settings = {

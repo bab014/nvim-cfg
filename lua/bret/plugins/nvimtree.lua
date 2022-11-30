@@ -42,6 +42,7 @@ nvim_tree.setup {
         },
       },
     },
+    special_files = { "README.md", "Makefile", "MAKEFILE", "go.mod" },
   },
   diagnostics = {
     enable = true,
@@ -63,5 +64,14 @@ nvim_tree.setup {
         { key = "v", cb = tree_cb "vsplit" },
       },
     },
+  },
+  filters = {
+    dotfiles = false,
+  },
+  git = {
+    enable = true,
+    ignore = false, -- don't hide ignored files
+    show_on_dirs = true,
+    timeout = 400,
   },
 }

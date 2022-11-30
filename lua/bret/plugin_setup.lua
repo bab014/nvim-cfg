@@ -127,6 +127,9 @@ return packer.startup(function(use)
   use { "mfussenegger/nvim-dap" }
   use { "rcarriga/nvim-dap-ui" }
   use { "leoluz/nvim-dap-go" }
+
+  -- ssh
+  -- use { "chipsenkbeil/distant.nvim", commit = "887fc16bdae59bd1865e0776b427ca521987f7fe" }
   
   if PACKER_BOOTSTRAP then
     require("packer").sync()

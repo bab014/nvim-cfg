@@ -21,6 +21,7 @@ spec "bret.nvimtree"
 spec "bret.whichkey"
 spec "bret.comment"
 spec "bret.toggleterm"
+spec "bret.null-ls"
 
 -- load plugins
 require("bret.plugins")

@@ -10,7 +10,8 @@ function M.config()
   local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
   null_ls.setup({
     sources = {
-      formatting.black
+      formatting.black,
+      formatting.isort,
     },
     on_attach = function(client, bufnr)
       if client.supports_method("textDocument/formatting") then

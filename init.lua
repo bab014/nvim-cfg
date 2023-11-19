@@ -4,8 +4,6 @@ require("bret.options")
 require("bret.keymaps")
 require("bret.autocommands")
 
-
-
 spec "bret.treesitter"
 spec "bret.autopairs"
 spec "bret.devicons"
@@ -31,6 +29,8 @@ spec "bret.colorizer"
 -- colorschemes
 spec "bret.colorschemes.onedark"
 
+-- plugin development
+spec "bret.bubble"
+
 -- load plugins
 require("bret.plugins")
-

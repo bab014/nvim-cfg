@@ -11,6 +11,9 @@ local M = {
     {
       "JoosepAlviste/nvim-ts-context-commentstring",
       event = "VeryLazy",
+      config = function ()
+        require("ts_context_commentstring").setup({})
+      end
     },
     -- {
     --   "HiPhish/nvim-ts-rainbow2",

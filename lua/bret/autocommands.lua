@@ -28,10 +28,6 @@ vim.cmd([[
     autocmd!
     autocmd VimResized * tabdo wincmd =
   augroup end
-  augroup filetypedetect
-    au BufRead,BufNewFile *.html call DetectGoHtmlTmpl()
-    au BufRead,BufNewFile *.gohtml :setl ft=gohtmltmpl
-  augroup END
   augroup remember_folds
     autocmd!
     autocmd BufWinLeave * silent! mkview
@@ -51,3 +47,8 @@ vim.api.nvim_exec(
    -- au WinEnter,BufEnter * setlocal statusline=%!v:lua.require'bret.me'.statusline()
     --au WinLeave,BufLeave * setlocal statusline=%!v:lua.require'bret.me'.statusline()
   --augroup END
+-- gohtml
+  -- augroup filetypedetect
+  --   au BufRead,BufNewFile *.html call DetectGoHtmlTmpl()
+  --   au BufRead,BufNewFile *.gohtml :setl ft=gohtmltmpl
+  -- augroup END

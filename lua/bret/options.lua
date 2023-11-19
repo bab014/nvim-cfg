@@ -59,6 +59,9 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
+-- tscomment string
+vim.g.skip_ts_context_commentstring_module = true
+
 -- vim.opt.shortmess:append("c")
 -- vim.opt.iskeyword:append("-")
 -- vim.opt.formatoptions:remove({ "c", "r", "o" })

@@ -39,6 +39,31 @@ local M = {
         icon = "",
         color = "#f1502f",
         name = "Git"
+      },
+      ["package.json"] = {
+        icon = "󰎙",
+        color = "#6cc24a",
+        name = "PackageJson"
+      },
+      ["package-lock.json"] = {
+        icon = "󰎙",
+        color = "#6cc24a",
+        name = "PackageLockJson"
+      },
+      ["tailwind.config.js"] = {
+        icon = "󱏿",
+        color = "#06b6d4",
+        name = "Tailwind"
+      },
+      js = {
+        icon = "",
+        color = "#f0db4f",
+        name = "Js"
+      },
+      json = {
+        icon = "󰘦",
+        color = "#f0db4f",
+        name = "Json"
       }
     }
   }

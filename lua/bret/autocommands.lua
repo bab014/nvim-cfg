@@ -28,6 +28,10 @@ vim.cmd([[
     autocmd!
     autocmd VimResized * tabdo wincmd =
   augroup end
+  augroup filetypedetect
+    au BufRead,BufNewFile *.html call DetectGoHtmlTmpl()
+    au BufRead,BufNewFile *.gohtml :setl ft=gohtmltmpl
+  augroup END
   augroup remember_folds
     autocmd!
     autocmd BufWinLeave * silent! mkview

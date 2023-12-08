@@ -12,6 +12,9 @@ function M.config()
     sources = {
       formatting.black,
       formatting.isort,
+      formatting.prettier.with({
+        filetypes = { "html", "json", "yaml", "markdown", "gohtmltmpl" }
+      }),
     },
     on_attach = function(client, bufnr)
       if client.supports_method("textDocument/formatting") then

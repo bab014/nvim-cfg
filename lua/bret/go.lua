@@ -5,8 +5,8 @@ local M = {
     "neovim/nvim-lspconfig",
     "nvim-treesitter/nvim-treesitter",
   },
-  event = "CmdlineEnter",
-  ft = { "go", "gomod" },
+  event = {"CmdlineEnter", "BufEnter *.gohtmltmpl"},
+  ft = { "go", "gomod", "gohtmltmpl" },
   build = ':lua require("go.install").update_all_sync()'
 }
 

@@ -107,7 +107,18 @@ function M.config()
       require("neodev").setup {}
     end
 
-    lspconfig[server].setup(opts)
+    local html_opts = {
+      on_attach = M.on_attach,
+      capabilities = M.common_capabilities(),
+      filetypes = { "html", "gohtmltmpl" }
+    }
+
+
+    if server == "html" then
+      lspconfig[server].setup(html_opts)
+    else
+      lspconfig[server].setup(opts)
+    end
   end
 end
 

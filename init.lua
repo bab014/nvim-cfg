@@ -28,6 +28,8 @@ spec "bret.colorizer"
 
 -- colorschemes
 spec "bret.colorschemes.onedark"
+spec "bret.colorschemes.nord"
+spec "bret.colorschemes.gruvbox"
 
 -- plugin development
 spec "bret.bubble"

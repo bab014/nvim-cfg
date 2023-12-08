@@ -47,8 +47,12 @@ function M.config()
 
   local cmp = require "cmp"
   local luasnip = require "luasnip"
+  require("luasnip").snippets = {
+    gohtmltmpl = {}
+  }
+  require("luasnip").filetype_extend("gohtmltmpl", { "html", "hugo" })
   require("luasnip/loaders/from_vscode").lazy_load()
-  require("luasnip").filetype_extend("typescriptreact", { "html" })
+  require("luasnip/loaders/from_vscode").lazy_load({ paths = { "~/repos/bret-snippets" } })
 
   local check_backspace = function()
     local col = vim.fn.col "." - 1

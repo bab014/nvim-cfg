@@ -1,10 +1,15 @@
 local M = {
-  "gbprod/nord.nvim",
+  "bab014/nordplus.nvim",
+  branch = "main",
   lazy = false,
+  priority = 1000,
 }
 
 function M.config()
-  require("nord").setup({})
+  vim.g.nord_contrast = true
+  vim.g.nord_borders = true
+  vim.g.nord_italic = false
+  vim.cmd[[colorscheme nord]]
 end
 
 return M

@@ -170,6 +170,7 @@ function M.config()
       behavior = cmp.ConfirmBehavior.Replace,
       select = false,
     },
+    preselect = cmp.PreselectMode.None,
     window = {
       completion = {
         border = "rounded",

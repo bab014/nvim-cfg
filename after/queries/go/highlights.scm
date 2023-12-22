@@ -1,20 +1,6 @@
 ;; extends
-":=" @lsp.type.type
+":=" @character.special
 
 (short_var_declaration
   left: (expression_list
-          (identifier) @label))
-
-[
- "<"
- ">"
- "++"
- "=="
- "!="
- "+="
- "*="
- "<<"
- ">>"
- "<="
- ">="
- ] @field
+          (identifier) @debug))

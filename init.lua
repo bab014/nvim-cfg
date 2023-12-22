@@ -25,11 +25,12 @@ spec "bret.null-ls"
 -- spec "bret.breadcrumbs"
 spec "bret.bufferline"
 spec "bret.colorizer"
+spec "bret.markdown"
 
 -- colorschemes
 spec "bret.colorschemes.onedark"
-spec "bret.colorschemes.nord"
 spec "bret.colorschemes.gruvbox"
+spec "bret.colorschemes.nord"
 
 -- plugin development
 spec "bret.bubble"

@@ -10,6 +10,9 @@ function M.config()
     colored = true,
     symbols = { added = icons.git.LineAdded, modified = icons.git.LineModified, removed = icons.git.LineRemoved }, -- Changes the symbols used by the diff.
   }
+  local function logo()
+    return [[]]
+  end
 
   require("lualine").setup {
     options = {
@@ -27,7 +30,7 @@ function M.config()
       -- lualine_x = { copilot },
       -- lualine_y = { "filetype" },
       -- lualine_z = { "progress" },
-      lualine_a = { "mode" },
+      lualine_a = { logo, "mode" },
       lualine_b = { {"branch", icon =""} },
       lualine_c = { diff },
       lualine_x = { "diagnostics" },
